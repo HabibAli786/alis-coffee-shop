@@ -1,0 +1,20 @@
+.nav {
+    border-bottom: solid;
+    font-size: 40px;
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+    align-items: center;
+    padding: 20px;
+}
+
+.brand {
+    display: grid;
+    grid-template-columns: 0.1fr 2fr;
+    align-items: inherit;
+}
+
+.nav-item {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    list-style-type: none;
+}
