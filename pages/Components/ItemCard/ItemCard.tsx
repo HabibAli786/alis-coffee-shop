@@ -9,7 +9,7 @@ type ItemCardProps = {
   imgSrc: string
 }
 
-const ItemCard: NextPage<ItemCardProps> = ({ title, price, imgSrc }: ItemCardProps) => {
+const ItemCard: NextPage<ItemCardProps> = ({ title, price, imgSrc }) => {
   return (
     <>
       <div className={styles['item-card']}>

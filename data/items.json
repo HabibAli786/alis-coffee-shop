@@ -1,52 +1,52 @@
 {
     "items": [
         {
-            "name": "Americano",
+            "title": "Americano",
             "price": 3.49,
             "imgSrc": "americano"
         },
         {
-            "name": "Caffee Latte",
+            "title": "Caffee Latte",
             "price": 3.85,
             "imgSrc": "caffee-latte"
         },
         {
-            "name": "Chocolate Twist",
+            "title": "Chocolate Twist",
             "price": 2.50,
             "imgSrc": "choc-twist"
         },
         {
-            "name": "Classic Oatmeal",
+            "title": "Classic Oatmeal",
             "price": 3.35,
             "imgSrc": "classic-oatmeal"
         },
         {
-            "name": "Cold Brew Coffee",
+            "title": "Cold Brew Coffee",
             "price": 3.60,
             "imgSrc": "cold-brew-coffee"
         },
         {
-            "name": "Pizzeta",
+            "title": "Pizzeta",
             "price": 4.00,
             "imgSrc": "pizzeta"
         },
         {
-            "name": "Pumpkin Spice Cake",
+            "title": "Pumpkin Spice Cake",
             "price": 2.75,
             "imgSrc": "pumpkin-spice-cake"
         },
         {
-            "name": "Pumpkin Spice Latte",
+            "title": "Pumpkin Spice Latte",
             "price": 5.00,
             "imgSrc": "pumpkin-spice-latte"
         },
         {
-            "name": "Roast Blondie",
+            "title": "Roast Blondie",
             "price": 2.20,
             "imgSrc": "roast-blondie"
         },
         {
-            "name": "Bottle of Water",
+            "title": "Bottle of Water",
             "price": 4.00,
             "imgSrc": "water"
         }
