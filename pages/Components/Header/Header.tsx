@@ -1,9 +1,10 @@
+import { NextPage } from 'next'
 import { BiCoffeeTogo } from 'react-icons/bi'
 import { BsBasket } from 'react-icons/bs'
 
 import styles from './Header.module.css'
 
-const Header = () => {
+const Header: NextPage = () => {
     return (
         <nav className={styles.nav}>
           <div className={styles.brand}>
