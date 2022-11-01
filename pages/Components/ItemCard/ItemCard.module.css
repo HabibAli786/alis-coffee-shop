@@ -45,7 +45,6 @@
     align-self: center;
 }
 
-.item-info-button:hover {
-    background-color: rgb(86, 195, 8);
-    transition: 0.5s;
+.item-info-button:active {
+    background-color: rgb(128, 128, 132);
 }
