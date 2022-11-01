@@ -1,4 +1,4 @@
-import type { GetServerSideProps, GetStaticProps, NextPage } from 'next'
+import type { NextPage } from 'next'
 import { foodItem } from '../../../models/item.model'
 import ItemCard from '../ItemCard/ItemCard'
 import styles from './Home.module.css'

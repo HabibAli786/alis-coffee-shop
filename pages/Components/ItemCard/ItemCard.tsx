@@ -1,5 +1,6 @@
 import type { NextPage } from 'next'
 import Image from 'next/future/image'
+import { useCartUpdate } from '../../../Context/AppProvider'
 import { foodItem } from '../../../models/item.model'
 import styles from './ItemCard.module.css'
 
@@ -10,6 +11,8 @@ type ItemCardProps = {
 }
 
 const ItemCard: NextPage<foodItem> = ({ title, price, imgSrc }) => {
+  const addToCart = useCartUpdate()
+  
   return (
     <>
       <div className={styles['item-card']}>
@@ -25,7 +28,7 @@ const ItemCard: NextPage<foodItem> = ({ title, price, imgSrc }) => {
         <div className={styles['item-info-container']}>
             <h1 className={styles['item-info-title']}>{title}</h1>
             <p className={styles['item-info-price']}>£{price}</p>
-            <button className={styles['item-info-button']}>Add to Cart</button>
+            <button className={styles['item-info-button']} onClick={addToCart}>Add to Cart</button>
         </div>
       </div>
     </>
