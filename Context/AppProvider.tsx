@@ -15,13 +15,9 @@ export function useCartUpdate() {
 export default function AppProvider({ children }: any) {
   const [cart, setCart] = useState<foodItem[] | []>([])
 
-  function addItemToCart(item: foodItem) {
-    setCart([...cart, item])
-  }
-
   return ( 
     <CartContext.Provider value={cart}>
-        <CartUpdateContext.Provider value={addItemToCart}>
+        <CartUpdateContext.Provider value={setCart}>
             {children}
         </CartUpdateContext.Provider>
     </CartContext.Provider>

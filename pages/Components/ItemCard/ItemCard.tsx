@@ -12,6 +12,10 @@ type ItemCardProps = {
 
 const ItemCard: NextPage<foodItem> = ({ title, price, imgSrc }) => {
   const addToCart = useCartUpdate()
+
+  const handleAddCart = () => {
+    addToCart((value: foodItem[] | []) => [...value, { title, price, imgSrc }])
+  }
   
   return (
     <>
@@ -28,7 +32,7 @@ const ItemCard: NextPage<foodItem> = ({ title, price, imgSrc }) => {
         <div className={styles['item-info-container']}>
             <h1 className={styles['item-info-title']}>{title}</h1>
             <p className={styles['item-info-price']}>£{price}</p>
-            <button className={styles['item-info-button']} onClick={addToCart}>Add to Cart</button>
+            <button className={styles['item-info-button']} onClick={handleAddCart}>Add to Cart</button>
         </div>
       </div>
     </>
