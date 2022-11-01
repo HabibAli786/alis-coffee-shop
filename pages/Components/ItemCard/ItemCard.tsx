@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
 import Image from 'next/future/image'
-import americano from '../../../public/food/americano.png'
+import { foodItem } from '../../../models/item.model'
 import styles from './ItemCard.module.css'
 
 type ItemCardProps = {
@@ -9,7 +9,7 @@ type ItemCardProps = {
   imgSrc: string
 }
 
-const ItemCard: NextPage<ItemCardProps> = ({ title, price, imgSrc }) => {
+const ItemCard: NextPage<foodItem> = ({ title, price, imgSrc }) => {
   return (
     <>
       <div className={styles['item-card']}>

@@ -13,8 +13,9 @@ const Header: NextPage = () => {
           </div>
           
           <div>
-            <ul>
-                <li className={styles['nav-item']}> Basket <BsBasket size={50} /></li>
+            <ul className={styles['nav-items']}>
+              <li className={styles['nav-item']}> Basket</li>
+              <li className={styles['nav-item']}><BsBasket size={50} /><span className={styles['nav-cart-num']}>1</span></li>
             </ul>
           </div>
         </nav>
