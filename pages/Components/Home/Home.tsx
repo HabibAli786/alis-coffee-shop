@@ -1,7 +1,9 @@
 import type { NextPage } from 'next'
 import { foodItem } from '../../../models/item.model'
 import ItemCard from '../ItemCard/ItemCard'
+import Checkout from '../Checkout/Checkout'
 import styles from './Home.module.css'
+import { useCartMenu } from '../../../Context/AppProvider'
 
 type HomeProps = {
   items: foodItem[]
@@ -9,6 +11,7 @@ type HomeProps = {
 
 const Home: NextPage<HomeProps> = (props: HomeProps) => {
   console.log(props.items)
+  const [cartMenu, setCartMenu] = useCartMenu()
   
   return (
     <>
@@ -23,6 +26,9 @@ const Home: NextPage<HomeProps> = (props: HomeProps) => {
             />
         )}
       </div>
+      {cartMenu &&
+        <Checkout />
+      }
     </>
   )
 }

@@ -1,12 +1,13 @@
 import { NextPage } from 'next'
 import { BiCoffeeTogo } from 'react-icons/bi'
 import { BsBasket } from 'react-icons/bs'
-import { useCart } from '../../../Context/AppProvider'
+import { useCart, useCartMenu } from '../../../Context/AppProvider'
 
 import styles from './Header.module.css'
 
 const Header: NextPage = () => {
-  const cart = useCart()
+  const [cart, setCart] = useCart()
+  const [cartMenu, setCartMenu] = useCartMenu()
 
   console.log(cart?.length)
     return (
@@ -18,7 +19,7 @@ const Header: NextPage = () => {
           
           <div>
             <ul className={styles['nav-items']}>
-              <li className={styles['nav-item']}> Basket</li>
+              <li className={styles['nav-item']} onClick={() => setCartMenu(true)}>Basket</li>
               <li className={styles['nav-item']}>
                 <BsBasket size={50} />
                 {cart?.length !== 0 &&

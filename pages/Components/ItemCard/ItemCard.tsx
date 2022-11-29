@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
 import Image from 'next/future/image'
-import { useCartMenu, useCartUpdate } from '../../../Context/AppProvider'
+import { useCart } from '../../../Context/AppProvider'
 import { foodItem } from '../../../models/item.model'
 import styles from './ItemCard.module.css'
 
@@ -11,12 +11,11 @@ type ItemCardProps = {
 }
 
 const ItemCard: NextPage<foodItem> = ({ title, price, imgSrc }) => {
-  const addToCart = useCartUpdate()
-  const [cartMenu, setCartMenu] = useCartMenu()
+  const [cartMenu, setCartMenu] = useCart()
 
   const handleAddCart = () => {
-    setCartMenu(true)
-    addToCart((value: foodItem[] | []) => [...value, { title, price, imgSrc }])
+    // setCartMenu(true)
+    setCartMenu((value: foodItem[] | []) => [...value, { title, price, imgSrc }])
   }
   
   return (
