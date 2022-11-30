@@ -2,12 +2,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 import items from '../../data/items.json'
 
-type Data = {
-  name: string,
-  price: number,
-  imgeSrc: string
-}
-
 export default function handler(
   req: NextApiRequest,
   res: NextApiResponse
@@ -15,6 +9,6 @@ export default function handler(
   if(req.method === 'GET') {
     res.status(200).json(items)
   }
-  console.log(req.body)
+  // console.log(req.body)
   // res.status(200).json({ name: 'John Doe' })
 }
