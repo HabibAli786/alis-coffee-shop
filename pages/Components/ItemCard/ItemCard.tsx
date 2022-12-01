@@ -9,12 +9,10 @@ const ItemCard: NextPage<foodItem> = ({ title, price, imgSrc }) => {
   const [cart, setCart] = useCart()
 
   const handleAddCart = () => {
-    // setCartMenu(true)
     let qty = 1
     if(cart.length === 0) {
       setCart((value: []) => [...value, { title, price, qty: qty }])
     } else {
-      // Instead of forEach filter the array to find a matching title if non exist then create new item in the array
       const matchingItem = cart.find((item: foodItem) => item.title === title)
       if(matchingItem) {
         console.log("Found matching item", title)
@@ -23,8 +21,10 @@ const ItemCard: NextPage<foodItem> = ({ title, price, imgSrc }) => {
           if(item.title === title) {
             return {...item, qty: item.qty + 1}
           }
+          return item
         })
 
+        console.log("New cart", newCart)
         setCart(newCart)
         return true
       }
