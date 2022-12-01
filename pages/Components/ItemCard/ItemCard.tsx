@@ -1,21 +1,36 @@
 import type { NextPage } from 'next'
 import Image from 'next/future/image'
 import { useCart } from '../../../Context/AppProvider'
+import { cartItem } from '../../../models/cartItem.model'
 import { foodItem } from '../../../models/item.model'
 import styles from './ItemCard.module.css'
 
-type ItemCardProps = {
-  title: string,
-  price: number,
-  imgSrc: string
-}
-
 const ItemCard: NextPage<foodItem> = ({ title, price, imgSrc }) => {
-  const [cartMenu, setCartMenu] = useCart()
+  const [cart, setCart] = useCart()
 
   const handleAddCart = () => {
     // setCartMenu(true)
-    setCartMenu((value: foodItem[] | []) => [...value, { title, price, imgSrc }])
+    let qty = 1
+    if(cart.length === 0) {
+      setCart((value: []) => [...value, { title, price, qty: qty }])
+    } else {
+      // Instead of forEach filter the array to find a matching title if non exist then create new item in the array
+      const matchingItem = cart.find((item: foodItem) => item.title === title)
+      if(matchingItem) {
+        console.log("Found matching item", title)
+
+        const newCart = cart.map((item: cartItem) => {
+          if(item.title === title) {
+            return {...item, qty: item.qty + 1}
+          }
+        })
+
+        setCart(newCart)
+        return true
+      }
+
+      setCart((value: []) => [...value, { title, price, qty: qty }])
+    }
   }
   
   return (
