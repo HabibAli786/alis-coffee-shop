@@ -12,7 +12,6 @@ const Checkout: NextPage = () => {
         console.log(cart)
         let total = 0
         cart.forEach((item: cartItem) => {
-            console.log("item price", item.price)
             total = (item.price * item.qty) + total
         })
         return Math.round(total * 100) / 100
