@@ -43,11 +43,10 @@ const Checkout: NextPage = () => {
                         <p key={index+2}>£{item.price}</p>
                     </>
                     )}
-                    {/* {renderCartItems()} */}
                 </div>
                 <div className={styles['checkout-items-total']}>
                     <h1>Total Price</h1>
-                    <h1 >£{totalPrice()}</h1>
+                    <h1>£{totalPrice()}</h1>
                 </div>
             </div>
         </div>

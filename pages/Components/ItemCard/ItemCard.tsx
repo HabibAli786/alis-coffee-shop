@@ -10,13 +10,12 @@ const ItemCard: NextPage<foodItem> = ({ title, price, imgSrc }) => {
 
   const handleAddCart = () => {
     let qty = 1
+
     if(cart.length === 0) {
       setCart((value: []) => [...value, { title, price, qty: qty }])
     } else {
       const matchingItem = cart.find((item: foodItem) => item.title === title)
       if(matchingItem) {
-        console.log("Found matching item", title)
-
         const newCart = cart.map((item: cartItem) => {
           if(item.title === title) {
             return {...item, qty: item.qty + 1}
@@ -24,12 +23,10 @@ const ItemCard: NextPage<foodItem> = ({ title, price, imgSrc }) => {
           return item
         })
 
-        console.log("New cart", newCart)
         setCart(newCart)
         return true
       }
-
-      setCart((value: []) => [...value, { title, price, qty: qty }])
+      setCart((value: cartItem[] | []) => [...value, { title, price, qty: qty }])
     }
   }
   

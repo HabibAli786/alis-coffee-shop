@@ -10,7 +10,6 @@ type HomeProps = {
 }
 
 const Home: NextPage<HomeProps> = (props: HomeProps) => {
-  // console.log(props.items)
   const [cartMenu, setCartMenu] = useCartMenu()
   
   return (
