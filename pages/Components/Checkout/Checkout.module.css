@@ -5,8 +5,18 @@
   height: 100%;
   width: 40%;
   right: 0%;
-  transition: width 2s;
   border-left: solid;
+  animation: displayCart 200ms ease-in;
+}
+
+@keyframes displayCart {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 40%;
+  }
 }
 
 .checkout-header-container {
