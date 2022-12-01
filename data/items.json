@@ -49,6 +49,16 @@
             "title": "Bottle of Water",
             "price": 4.00,
             "imgSrc": "water"
+        },
+        {
+            "title": "Toffee Nut Frappuccino",
+            "price": 5.35,
+            "imgSrc": "toffee-nut-cream-frapp"
+        },
+        {
+            "title": "Tomato & Mozz Panini",
+            "price": 5.80,
+            "imgSrc": "tomato-mozzarella-panini"
         }
     ]
 }
