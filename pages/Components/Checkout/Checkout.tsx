@@ -5,8 +5,8 @@ import { cartItem } from '../../../models/cartItem.model'
 import styles from './Checkout.module.css'
 
 const Checkout: NextPage = () => {
-    const [cart, setCart] = useCart()
-    const [cartMenu, setCartMenu] = useCartMenu()
+    const { cart, setCart } = useCart()
+    const { cartMenu, setCartMenu } = useCartMenu()
 
     const totalPrice = () => {
         console.log(cart)

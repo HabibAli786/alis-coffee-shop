@@ -10,7 +10,7 @@ type HomeProps = {
 }
 
 const Home: NextPage<HomeProps> = (props: HomeProps) => {
-  const [cartMenu, setCartMenu] = useCartMenu()
+  const { cartMenu, setCartMenu } = useCartMenu()
   
   return (
     <>

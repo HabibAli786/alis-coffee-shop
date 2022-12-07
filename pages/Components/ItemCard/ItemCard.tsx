@@ -6,7 +6,7 @@ import { foodItem } from '../../../models/item.model'
 import styles from './ItemCard.module.css'
 
 const ItemCard: NextPage<foodItem> = ({ title, price, imgSrc }) => {
-  const [cart, setCart] = useCart()
+  const { cart, setCart } = useCart()
 
   const handleAddCart = () => {
     let qty = 1
