@@ -2,7 +2,7 @@ import type { GetStaticProps, InferGetStaticPropsType, NextPage } from 'next'
 import { foodItem } from '../models/item.model'
 import Home from './Components/Home/Home'
 
-const HomePage: NextPage = ({ items }: InferGetStaticPropsType<typeof getStaticProps>) => {
+const App: NextPage = ({ items }: InferGetStaticPropsType<typeof getStaticProps>) => {
   // console.log(items)
   return (
     <>
@@ -25,4 +25,4 @@ export const getStaticProps: GetStaticProps = async (context) => {
   }
 }
 
-export default HomePage
+export default App

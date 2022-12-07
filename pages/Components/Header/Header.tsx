@@ -7,8 +7,8 @@ import { cartItem } from '../../../models/cartItem.model'
 import styles from './Header.module.css'
 
 const Header: NextPage = () => {
-  const { cart, setCart }= useCart()
-  const { cartMenu, setCartMenu } = useCartMenu()
+  const { cart }= useCart()
+  const { setCartMenu } = useCartMenu()
 
   const calTotalItems = () => {
     let total = 0
