@@ -1,9 +1,9 @@
 import type { NextPage } from 'next'
-import { foodItem } from '../../../models/item.model'
+import { foodItem } from '../../models/item.model'
 import ItemCard from '../ItemCard/ItemCard'
 import Checkout from '../Checkout/Checkout'
 import styles from './Home.module.css'
-import { useCartMenu } from '../../../Context/AppProvider'
+import { useCartMenu } from '../../Context/AppProvider'
 
 type HomeProps = {
   items: foodItem[]

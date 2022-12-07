@@ -1,8 +1,8 @@
 import type { NextPage } from 'next'
 import Image from 'next/future/image'
-import { useCart } from '../../../Context/AppProvider'
-import { cartItem } from '../../../models/cartItem.model'
-import { foodItem } from '../../../models/item.model'
+import { useCart } from '../../Context/AppProvider'
+import { cartItem } from '../../models/cartItem.model'
+import { foodItem } from '../../models/item.model'
 import styles from './ItemCard.module.css'
 
 const ItemCard: NextPage<foodItem> = ({ title, price, imgSrc }) => {

@@ -1,6 +1,6 @@
 import type { GetStaticProps, InferGetStaticPropsType, NextPage } from 'next'
 import { foodItem } from '../models/item.model'
-import Home from './Components/Home/Home'
+import Home from '../Components/Home/Home'
 
 const App: NextPage = ({ items }: InferGetStaticPropsType<typeof getStaticProps>) => {
   // console.log(items)

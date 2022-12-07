@@ -1,8 +1,8 @@
 import { NextPage } from 'next'
 import { BiCoffeeTogo } from 'react-icons/bi'
 import { BsBasket } from 'react-icons/bs'
-import { useCart, useCartMenu } from '../../../Context/AppProvider'
-import { cartItem } from '../../../models/cartItem.model'
+import { useCart, useCartMenu } from '../../Context/AppProvider'
+import { cartItem } from '../../models/cartItem.model'
 
 import styles from './Header.module.css'
 

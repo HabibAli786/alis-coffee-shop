@@ -1,7 +1,7 @@
 import { NextPage } from 'next'
 import { IoCloseCircleOutline } from 'react-icons/io5'
-import { useCart, useCartMenu } from '../../../Context/AppProvider'
-import { cartItem } from '../../../models/cartItem.model'
+import { useCart, useCartMenu } from '../../Context/AppProvider'
+import { cartItem } from '../../models/cartItem.model'
 import styles from './Checkout.module.css'
 
 const Checkout: NextPage = () => {
